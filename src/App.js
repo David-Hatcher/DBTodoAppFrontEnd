@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 //import logo from './logo.svg';
 import './App.css';
 import './index.css';
@@ -6,6 +6,11 @@ import Header from './components/Header';
 import Body from './components/Body';
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:5000/url")
+    .then(response => response.json())
+    .then(response => {console.log(response)})
+  }, [])
   const [body,setBody] = useState('view');
   const showViewTasks = () => {
     setBody('view');

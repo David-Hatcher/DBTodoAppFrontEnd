@@ -4,7 +4,7 @@ import TaskTitle from './TaskTitle'
 
 export default function TaskList(props) {
     const buildTaskCard = (task) =>{
-        return <TaskCard task={task}/>
+        return <TaskCard key={task} task={task}/>
     }
     return (
         <div className="mx-2">

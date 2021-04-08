@@ -24,8 +24,8 @@
         "status" : "UAT",
         "description" : "Create Endpoint for API, need multiple queries",
         "assignedTo" : "Curtis Goodwin",
-        "level":"Low"
-
+        "level":"Low",
+        "department":"ui/ux"
     },
     "10004":{
         "taskTitle": "Connect API to Front End",

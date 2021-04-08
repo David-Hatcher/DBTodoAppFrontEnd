@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import TaskCard from './TaskCard';
 
 export default function Modal(props) {
     const closeOnEscapeKeyDown = (e) => {
