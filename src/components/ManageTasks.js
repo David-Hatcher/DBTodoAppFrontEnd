@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function AddTask() {
+export default function ManageTasks() {
     return (
         <div>
-            Add Task Screen
+            Manage Tasks Screen
         </div>
     )
 }

@@ -34,7 +34,7 @@ export default function TaskCard(props) {
             <div className="col-span-2 text-left mx-1 text-sm">{data.assignedTo}</div>
             <div className="col-span-2 text-sm text-right mx-1">{`Due Date: ${formatDate(data.dueDate)}`}</div>
         </div>
-        <Modal show={show} onClose={() => setShow(false)} task={data}/>
+        <Modal show={show} onClose={() => setShow(false)} task={data} formatDate={formatDate} taskId={props.taskId}/>
         </>
     )
 }

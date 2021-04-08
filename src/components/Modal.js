@@ -19,21 +19,23 @@ export default function Modal(props) {
     }else{
         return (
             <div className="modal" onClick={props.onClose}>
-                <div className="modal-content" onClick={e => e.stopPropagation()}>
-                    <div classname="modal-header">
-                        <h4 className="modal-title">{props.task.taskTitle}</h4>
+                <div className="modal-content rounded border-2 border-black" onClick={e => e.stopPropagation()}>
+                    <div className="modal-header">
+                        <h4 className="modal-title">{props.task.taskTitle} - ID: {props.taskId}</h4>
                     </div>
-                    <div className="modal-body">
-                        <div className='task-description'>
+                    <div className="modal-body h-96 grid grid-rows-5 content-end">
+                        <div className='task-description row-start-2'>
                             {props.task.description}
                         </div>
-                        <div className="task-assignedTo">
-                            Assigned To: {props.task.assignedTo}
+                        <div className="task-details row-start-5 grid grid-cols-3">
+                            <div className="task-assignedTo">Assigned To: {props.task.assignedTo}</div>
+                            <div className="task-dept">Department: {props.task.department}</div>                         
+                            <div className="task-due">Due Date: {props.formatDate(props.task.dueDate)}</div>
                         </div>
 
                     </div>
                     <div className="modal-footer">
-                        <button onClick={props.onClose} className="button">Close</button>
+                        <button onClick={props.onClose} className="button bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Close</button>
                     </div>
                 </div>
             </div>

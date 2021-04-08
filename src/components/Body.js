@@ -1,5 +1,5 @@
 import React from 'react'
-import AddTask from './AddTask';
+import ManageTasks from './ManageTasks'
 import TaskAnalytics from './TaskAnalytics';
 import ViewTasks from './ViewTasks'
 
@@ -9,7 +9,7 @@ export default function Body(props) {
             case 'view':
                 return <ViewTasks/>
             case 'add':
-                return <AddTask/>
+                return <ManageTasks/>
             case 'anal':
                 return <TaskAnalytics/>
             default:

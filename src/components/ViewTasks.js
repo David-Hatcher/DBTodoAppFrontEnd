@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import TaskList from './TaskList'
 
 export default function ViewTasks() {
-    let tasks = require('../data/tasks.json');
+    const [tasks,setTasks] = useState({});
+    useEffect(() => {
+        fetch("http://localhost:5000/getTasks")
+        .then(response => response.json())
+        .then((response) => {
+            setTasks(response);
+            console.log(response)
+        })
+    }, [])
     console.log(tasks);
     const filterTasksByStatus = (tasks,status) => {
         let data = {};
@@ -16,7 +24,6 @@ export default function ViewTasks() {
     const doesEntryMatch = (entry,status) =>{
         return entry.status.toLowerCase() == status;
     }
-    console.log(filterTasksByStatus(tasks,'todo'))
     return (
         <>
         <div className="col-span-5 font-bold text-2xl">Current Tasks</div>

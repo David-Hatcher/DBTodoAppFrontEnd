@@ -6,7 +6,8 @@
         "status" : "staging",
         "description" : "Please finish up the front end, it needs better CSS",
         "assignedTo" : "David Hatcher",
-        "level":"High"
+        "level":"High",
+        "department":"ui/ux"
     },
     "10002":{
         "taskTitle": "Add Data to DB",
@@ -15,7 +16,8 @@
         "status" : "in progress",
         "description" : "Adding rows to db for all tables",
         "assignedTo" : "Umar Baloch",
-        "level":"Medium"
+        "level":"Medium",
+        "department":"data"
     },
     "10003":{
         "taskTitle": "Set up API endpoints",
@@ -25,7 +27,7 @@
         "description" : "Create Endpoint for API, need multiple queries",
         "assignedTo" : "Curtis Goodwin",
         "level":"Low",
-        "department":"ui/ux"
+        "department":"api"
     },
     "10004":{
         "taskTitle": "Connect API to Front End",
@@ -34,7 +36,8 @@
         "status" : "todo",
         "description" : "Need to figure out how to make the react app connect to the API",
         "assignedTo" : "David Hatcher",
-        "level":"Low"
+        "level":"Low",
+        "department":"ui/ux"
     },
     "10005":{
         "taskTitle": "Make ER Diagram",
@@ -43,6 +46,7 @@
         "status" : "production",
         "description" : "Build an ER diagram to describe the projects DB",
         "assignedTo" : "David Hatcher",
-        "level":"Low"
+        "level":"Low",
+        "department":"ui/ux"
     }
 }
