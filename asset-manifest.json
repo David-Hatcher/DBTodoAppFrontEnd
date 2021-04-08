@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/DBTodoAppFrontEnd/static/css/main.5299bd42.chunk.css",
-    "main.js": "/DBTodoAppFrontEnd/static/js/main.de7eb7d3.chunk.js",
-    "main.js.map": "/DBTodoAppFrontEnd/static/js/main.de7eb7d3.chunk.js.map",
+    "main.css": "/DBTodoAppFrontEnd/static/css/main.8abfccab.chunk.css",
+    "main.js": "/DBTodoAppFrontEnd/static/js/main.efa8f001.chunk.js",
+    "main.js.map": "/DBTodoAppFrontEnd/static/js/main.efa8f001.chunk.js.map",
     "runtime-main.js": "/DBTodoAppFrontEnd/static/js/runtime-main.55925955.js",
     "runtime-main.js.map": "/DBTodoAppFrontEnd/static/js/runtime-main.55925955.js.map",
     "static/js/2.6212c517.chunk.js": "/DBTodoAppFrontEnd/static/js/2.6212c517.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.5a9ac3ac.chunk.js": "/DBTodoAppFrontEnd/static/js/3.5a9ac3ac.chunk.js",
     "static/js/3.5a9ac3ac.chunk.js.map": "/DBTodoAppFrontEnd/static/js/3.5a9ac3ac.chunk.js.map",
     "index.html": "/DBTodoAppFrontEnd/index.html",
-    "static/css/main.5299bd42.chunk.css.map": "/DBTodoAppFrontEnd/static/css/main.5299bd42.chunk.css.map",
+    "static/css/main.8abfccab.chunk.css.map": "/DBTodoAppFrontEnd/static/css/main.8abfccab.chunk.css.map",
     "static/js/2.6212c517.chunk.js.LICENSE.txt": "/DBTodoAppFrontEnd/static/js/2.6212c517.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.55925955.js",
     "static/js/2.6212c517.chunk.js",
-    "static/css/main.5299bd42.chunk.css",
-    "static/js/main.de7eb7d3.chunk.js"
+    "static/css/main.8abfccab.chunk.css",
+    "static/js/main.efa8f001.chunk.js"
   ]
 }
