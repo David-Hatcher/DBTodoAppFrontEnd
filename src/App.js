@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Body from './components/Body';
 
 function App() {
-
   const [body,setBody] = useState('view');
   const showViewTasks = () => {
     setBody('view');
@@ -18,7 +17,7 @@ function App() {
     setBody('add');
   }
   return (
-    <div className="App h-screen">
+    <div className="App h-screen font-mono overflow-hidden">
       <Header showViewTask={showViewTasks} showAnalytics={showAnalytics} showAddTask={showAddTask} body={body}/>
       <Body show={body}/>
     </div>

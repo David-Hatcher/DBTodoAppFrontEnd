@@ -57,3 +57,22 @@ code {
   border-top:1px solid #eee;
   border-bottom:1px solid #eee;
 }
+
+#root{
+  background-image: url('./images/background.png')
+}
+
+.DayPickerInput input{
+  border-color: black;
+  border-radius: .25rem;
+  width: 100%;
+  border-width: 1px;
+}
+
+.DayPickerInput {
+  color:black;
+}
+
+#addTaskForm .DayPickerInput input{
+  width:112%;
+}

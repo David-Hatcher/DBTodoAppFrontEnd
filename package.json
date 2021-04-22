@@ -1,5 +1,5 @@
 {
-  "homepage":"https://www.davidhatcher.dev/DBTodoAppFrontEnd/",
+  "homepage": "https://www.davidhatcher.dev/DBTodoAppFrontEnd/",
   "name": "dbapp",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +8,9 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "date-fns": "^2.21.1",
     "react": "^17.0.2",
+    "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
@@ -19,7 +21,7 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"    
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
