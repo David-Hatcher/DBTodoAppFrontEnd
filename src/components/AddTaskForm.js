@@ -173,6 +173,7 @@ export default function AddTaskForm(props) {
         setPrevPriority("");
         setPrevDepartment("");
         setPrevDescription("");
+        setPrevEmpId("");
     }
 
     return (

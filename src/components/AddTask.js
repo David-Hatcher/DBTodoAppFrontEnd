@@ -18,25 +18,18 @@ export default function AddTask(props) {
         setPreviewTask(newTask)
     }
     const addTask = async (task) => {
-
-        var raw = "";
-
         var requestOptions = {
         method: 'GET',
         redirect: 'follow'
         };
-
         const res = await fetch("http://localhost:5000/queries/getTaskId", requestOptions)
         .then(response => response.text())
         .then(result => {
-            task.taskId = JSON.parse(result).taskId;
-            console.log(task);
             
+            task.taskId = JSON.parse(result).taskId;
             var mySubHeaders = new Headers();
             mySubHeaders.append("Content-Type", "application/json");
-
             var rawSub = JSON.stringify(task);
-
             var requestOptions = {
             method: 'POST',
             headers: mySubHeaders,
@@ -50,21 +43,6 @@ export default function AddTask(props) {
         })
         .catch(error => console.log('error', error));
 
-        // console.log(task);
-        // let myHeaders = new Headers();
-        // myHeaders.append("Content-Type","application/json");
-        // let raw = JSON.stringify(task);
-        // let requestOptions = {
-        //     method: 'POST',
-        //     headers: myHeaders,
-        //     body: raw,
-        //     redirect: 'follow'
-        // };
-        
-        // const res =  await fetch('http://localhost:5000/addTask',requestOptions)
-        // .then(response => response.text())
-        // .then(result => console.log(result))
-        // .catch(err => console.log(err));
         return res;
     }
     // useEffect(() => {

@@ -4,11 +4,12 @@ import ReactDayPicker from './ReactDayPicker';
 
 export default function EditModal(props) {
     const [emp, setEmp] = useState(props.task.assignedTo);
-    const [dept, setDept] = useState(props.task.department);
+    const [dept, setDept] = useState(props.task.deptId);
     const [date,setDate] = useState(props.task.dueDate);
     const [status, setStatus] = useState(props.task.status);
-    const [level, setLevel] = useState(props.task.level);
+    const [level, setLevel] = useState(props.task.priority);
     const [description, setDescription] = useState(props.task.description);
+    const [empId, setEmpId] = useState(props.task.empId);
     const [modTask, setModTask] = useState(props.task);
     let options = ['Todo','In Progress','Staging','UAT','Production','Closed'];
     let urgencies = ['Low','Medium','High'];
@@ -33,11 +34,11 @@ export default function EditModal(props) {
         setDate(date.getTime()/1000)
     }
     
-    const genEmps = (emp, selected = null) => {
+    const genEmps = (emp, selected = null,key) => {
         if(emp.name.toLowerCase() == selected.toLowerCase()){
-            return <option selected value={emp.dept}>{emp.name}</option>            
+            return <option selected value={`${emp.deptId}|${emp.name}|${key}`}>{emp.name}</option>            
         }
-        return <option value={`${emp.dept}|${emp.name}`}>{emp.name}</option>
+        return <option value={`${emp.deptId}|${emp.name}|${key}`}>{emp.name}</option>
     }
 
     const genOptions = (option, selected = "") => {
@@ -58,7 +59,8 @@ export default function EditModal(props) {
     const modifyAssignedTo = (value) => {
         let vals = value.split("|");
         setEmp(vals[1]);
-        setDept(vals[0])
+        setDept(vals[0]);
+        setEmpId(vals[2]);
     }
 
     const setValues = (id,value) => {
@@ -82,6 +84,7 @@ export default function EditModal(props) {
 
     const getTaskFromChanges = () => {
         return {
+            taskId:props.taskId,
             taskTitle:props.task.taskTitle,
             dueDate:date,
             createDate:props.task.createDate,
@@ -89,7 +92,8 @@ export default function EditModal(props) {
             status:status,
             assignedTo:emp,
             level:level,
-            department:dept
+            deptId:dept,
+            empId:empId
         }
     }
 
@@ -159,7 +163,7 @@ export default function EditModal(props) {
                             <div className="grid grid-rows-2">
                                 <select id="assignedTo" onChange={handleChange} className="assignedTo h-6 box-border border border-black rounded">
                                     {Object.keys(props.emps).map((key) => {
-                                        return genEmps(props.emps[key],emp);
+                                        return genEmps(props.emps[key],emp,key);
                                     })}
                                 </select>
                                 <span>Dept: {dept}</span>
