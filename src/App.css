@@ -37,3 +37,11 @@
   }
 }
 
+.glow {
+  color: red;
+  text-align: center;
+
+}
+.glow{
+  text-shadow: 0 0 7px red;
+}

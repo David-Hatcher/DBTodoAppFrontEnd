@@ -86,7 +86,7 @@ export default function EditModal(props) {
         return {
             taskId:props.taskId,
             taskTitle:props.task.taskTitle,
-            dueDate:date,
+            dueDate:date.toString(),
             createDate:props.task.createDate,
             description:description,
             status:status,
@@ -105,22 +105,18 @@ export default function EditModal(props) {
         console.log(modTask);
         let myHeaders = new Headers();
         myHeaders.append("Content-Type","application/json");
-        // let ready = JSON.stringify(modTask);
-        let ready = JSON.stringify({
-            id: props.taskId,
-            task: modTask
-        });
+        let ready = JSON.stringify(modTask);
         let requestOptions = {
             method: 'POST',
             headers: myHeaders,
             body: ready,
             redirect: 'follow'
         }
-        const res = await fetch('http://localhost:5000/tasks/updateTask', requestOptions)
+        const res = await fetch('http://localhost:5000/posts/updateTask', requestOptions)
         .then(response => response.text())
         .then((result) =>{
             console.log(result);
-            if(JSON.parse(result).task == 'updated'){
+            if(JSON.parse(result).task == 'accepted'){
                 props.onClose()
             }
         })
