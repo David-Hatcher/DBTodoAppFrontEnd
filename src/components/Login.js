@@ -24,7 +24,7 @@ export default function Login(props) {
         redirect: 'follow'
         };
 
-        fetch("http://localhost:5000/posts/login", requestOptions)
+        fetch("https://databasedesignprojapi.herokuapp.com/posts/login", requestOptions)
         .then(response => response.text())
         .then(result => {
             result = JSON.parse(result);
@@ -40,7 +40,7 @@ export default function Login(props) {
 
     return (
         <div className="grid grid-cols-12 h-full grid-rows-6">
-            <form className="col-start-5 col-span-4 rounded row-start-3 row-span-2 bg-gray-100 border-4 border-black grid grid-cols-3 grid-rows-6 shadow-xl gap-3">
+            <form className="col-start-5 col-span-4 rounded row-start-3 row-span-2 bg-gray-100 border-4 border-black grid grid-cols-3 grid-rows-6 shadow-xl gap-3 rounded">
                 <div className="col-span-full row-start-2 text-3xl">Enter Login Information</div>
                 <div className="col-start-2 row-start-3">
                     Username:

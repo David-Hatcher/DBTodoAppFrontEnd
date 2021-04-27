@@ -14,20 +14,20 @@ export default function TaskAnalytics() {
     const [key, setKey] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:5000/queries/getTaskCountOfDepartment")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getTaskCountOfDepartment")
         .then(response => response.json())
         .then((response) => {
             setDataByDept(response);
             setChartData(response);
         })
 
-        fetch("http://localhost:5000/queries/getTaskCountOfUser")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getTaskCountOfUser")
         .then(response => response.json())
         .then((response) => {
             setDataByEmp(response);
         })
 
-        fetch("http://localhost:5000/queries/getTaskCountByStatus")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getTaskCountByStatus")
         .then(response => response.json())
         .then((response) => {
             setDataByStatus(response);
@@ -60,9 +60,9 @@ export default function TaskAnalytics() {
 
     return (
         <div className="h-9-10 grid grid-cols-12 grid-rows-6 gap-4">
-            <Button classAdds={"row-start-2 col-start-2"} activeBtn={btnActive} id={"dataByDept"} text={"Tickets By Department"} onclick={setDeptData}/>
-            <Button classAdds={"row-start-3 col-start-2"} activeBtn={btnActive} id={"dataByEmp"} text={"Tickets By Employee"} onclick={setEmpData}/>
-            <Button classAdds={"row-start-4 col-start-2"} activeBtn={btnActive} id={"dataByStatus"} text={"Tickets By Status"} onclick={setStatusData}/>
+            <Button classAdds={"row-start-2 col-start-2"} activeBtn={btnActive} id={"dataByDept"} text={"Tasks By Department"} onclick={setDeptData}/>
+            <Button classAdds={"row-start-3 col-start-2"} activeBtn={btnActive} id={"dataByEmp"} text={"Tasks By Employee"} onclick={setEmpData}/>
+            <Button classAdds={"row-start-4 col-start-2"} activeBtn={btnActive} id={"dataByStatus"} text={"Tasks By Status"} onclick={setStatusData}/>
             <BarChart key={key} data={chartData} classAdd={"border-4 row-start-2 shadow-2xl-15 col-start-4 ticket"} xAxis={xAxis} yAxis={yAxis}/>
         </div>
     )

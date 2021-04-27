@@ -6,7 +6,7 @@ export default function EditTask() {
     const [emps, setEmps] = useState({});
     
     useEffect(() => {
-        fetch("http://localhost:5000/queries/getEmployees")
+        fetch("https://databasedesignprojapi.herokuapp.com/getEmployees")
         .then(response => response.json())
         .then((response) => {
             setEmps(response);
@@ -14,7 +14,7 @@ export default function EditTask() {
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:5000/queries/getTasksByUser")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getTasksByUser")
         .then(response => response.json())
         .then((response) => {
             setTasks(response);

@@ -112,7 +112,7 @@ export default function EditModal(props) {
             body: ready,
             redirect: 'follow'
         }
-        const res = await fetch('http://localhost:5000/posts/updateTask', requestOptions)
+        const res = await fetch('https://databasedesignprojapi.herokuapp.com/posts/updateTask', requestOptions)
         .then(response => response.text())
         .then((result) =>{
             console.log(result);

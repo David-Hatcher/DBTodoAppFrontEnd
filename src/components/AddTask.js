@@ -22,7 +22,7 @@ export default function AddTask(props) {
         method: 'GET',
         redirect: 'follow'
         };
-        const res = await fetch("http://localhost:5000/queries/getTaskId", requestOptions)
+        const res = await fetch("https://databasedesignprojapi.herokuapp.com/queries/getTaskId", requestOptions)
         .then(response => response.text())
         .then(result => {
             
@@ -36,7 +36,7 @@ export default function AddTask(props) {
             body: rawSub,
             redirect: 'follow'
             };
-            fetch("http://localhost:5000/posts/addTask", requestOptions)
+            fetch("https://databasedesignprojapi.herokuapp.com/posts/addTask", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

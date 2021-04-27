@@ -62,7 +62,7 @@ function BarChart(props) {
 				fill:"black",
 				textAnchor:"middle",
 				fontWeight:"bold"
-			}}>Number of Tickets</text>
+			}}>Number of Tasks</text>
 			<g className="plot-area" />
 			<g className="x-axis" />
 			<g className="y-axis" />

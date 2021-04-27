@@ -7,7 +7,7 @@ export default function ViewTasks() {
     const [empList, setEmpList] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/queries/getTasksByUser")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getTasksByUser")
         .then(response => response.json())
         .then((response) => {
             findEmpWhoHaveTasks(response);

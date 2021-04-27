@@ -34,7 +34,7 @@ export default function AddTaskForm(props) {
     }
     
     useEffect(() => {
-        fetch("http://localhost:5000/queries/getEmployees")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getEmployees")
         .then(response => response.json())
         .then((response) => {
             setEmps(response);
