@@ -6,7 +6,7 @@ export default function EditTask() {
     const [emps, setEmps] = useState({});
     
     useEffect(() => {
-        fetch("https://databasedesignprojapi.herokuapp.com/getEmployees")
+        fetch("https://databasedesignprojapi.herokuapp.com/queries/getEmployees")
         .then(response => response.json())
         .then((response) => {
             setEmps(response);
