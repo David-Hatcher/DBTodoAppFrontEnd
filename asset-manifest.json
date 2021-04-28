@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/DBTodoAppFrontEnd/static/css/main.75f4da19.chunk.css",
-    "main.js": "/DBTodoAppFrontEnd/static/js/main.0d677d82.chunk.js",
-    "main.js.map": "/DBTodoAppFrontEnd/static/js/main.0d677d82.chunk.js.map",
+    "main.js": "/DBTodoAppFrontEnd/static/js/main.1b8f63f3.chunk.js",
+    "main.js.map": "/DBTodoAppFrontEnd/static/js/main.1b8f63f3.chunk.js.map",
     "runtime-main.js": "/DBTodoAppFrontEnd/static/js/runtime-main.ee090c86.js",
     "runtime-main.js.map": "/DBTodoAppFrontEnd/static/js/runtime-main.ee090c86.js.map",
     "static/css/2.07c45b87.chunk.css": "/DBTodoAppFrontEnd/static/css/2.07c45b87.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.07c45b87.chunk.css",
     "static/js/2.b2944659.chunk.js",
     "static/css/main.75f4da19.chunk.css",
-    "static/js/main.0d677d82.chunk.js"
+    "static/js/main.1b8f63f3.chunk.js"
   ]
 }
