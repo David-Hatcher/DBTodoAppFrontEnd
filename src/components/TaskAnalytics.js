@@ -35,7 +35,6 @@ export default function TaskAnalytics() {
     }, [])
 
     const setEmpData = () => {
-        console.log("clicked Emp")
         setKey(key + 1);
         setBtnActive("dataByEmp");
         setXAxis("name");
@@ -43,7 +42,6 @@ export default function TaskAnalytics() {
     }
 
     const setDeptData = () => {
-        console.log("clicked dept")
         setKey(key + 1);
         setBtnActive("dataByDept");
         setXAxis("deptName");
@@ -51,7 +49,6 @@ export default function TaskAnalytics() {
     }
 
     const setStatusData = () => {
-        console.log("clicked status")
         setKey(key + 1);
         setBtnActive("dataByStatus");
         setXAxis("taskStatus")
