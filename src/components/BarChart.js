@@ -17,20 +17,20 @@ function BarChart(props) {
 			.rangeRound([margin.left, width - margin.right])
 			.padding(0.1);
 
-		const y1 = d3
+		const y = d3
 			.scaleLinear()
 			.domain([0, d3.max(props.data, (d) => d[props.yAxis])])
 			.rangeRound([height - margin.bottom, margin.top]);
 
-		let xAxis = d3.axisBottom(x);
+		let x_axis = d3.axisBottom(x);
 		svg.select('.x-axis')
 				.attr("transform",`translate(0,${height - margin.bottom})`)
-				.call(xAxis)
+				.call(x_axis)
 
-		let y1Axis = d3.axisLeft(y1)
+		let y_axis = d3.axisLeft(y)
 		svg.select(".y-axis")
 			.attr("transform",`translate(${margin.left}, 0)`)
-			.call(y1Axis);
+			.call(y_axis);
 
 		svg
 			.select(".plot-area")
@@ -41,8 +41,8 @@ function BarChart(props) {
 			.attr("class", "bar")
 			.attr("x", (d) => x(d[props.xAxis]))
 			.attr("width", x.bandwidth())
-			.attr("y", (d) => y1(d[props.yAxis]))
-			.attr("height", (d) => y1(0) - y1(d[props.yAxis]));
+			.attr("y", (d) => y(d[props.yAxis]))
+			.attr("height", (d) => y(0) - y(d[props.yAxis]));
 		},
 		[props.data.length]
 	);
